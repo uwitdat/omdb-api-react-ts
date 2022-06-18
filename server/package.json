@@ -8,8 +8,12 @@
     "start": "nodemon --exec babel-node src/index.js"
   },
   "dependencies": {
+    "@prisma/client": "^3.15.2",
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "express": "~4.16.1"
+  },
+  "devDependencies": {
+    "prisma": "^3.15.2"
   }
 }
