@@ -1,9 +1,10 @@
 import "./App.css";
+import Search from "./components/search/Search";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">Ensemble Assess</h1>
+      <Search />
     </div>
   );
 }
