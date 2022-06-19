@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
-export const getAllMovies = async (req, res) => {
+export const getAllMovies = async (_, res) => {
   /* finds all movies, sorted by most recent createdAt */
   try {
     const allMovies = await prisma.Movie.findMany({
@@ -80,7 +80,6 @@ export const deleteMovie = async (req, res) => {
       id: Number(id)
     },
   })
-
 
   if (!movieToDelete) {
     return res.status(404).send({ 'success': false, 'data': `movie with id: ${id} does not exist.` })
