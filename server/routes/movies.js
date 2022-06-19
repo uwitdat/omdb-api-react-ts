@@ -6,12 +6,12 @@ const moviesRouter = express.Router();
 
 moviesRouter.get('/all', getAllMovies);
 
-moviesRouter.post('/new', createNewMovie)
+moviesRouter.post('/new', createNewMovie);
 
-moviesRouter.patch('/edit/:id', editMovie)
+moviesRouter.patch('/edit/:id', editMovie);
 
-moviesRouter.delete('/delete/:id', deleteMovie)
+moviesRouter.delete('/delete/:id', deleteMovie);
 
-moviesRouter.get('/search', searchMovieByTitle)
+moviesRouter.get('/search', searchMovieByTitle);
 
 export default moviesRouter;

@@ -3,7 +3,8 @@ import { likeMovie, dislikeMovie } from '../controllers/likes-dislikes/likesDisl
 
 const likesDislikesRouter = express.Router();
 
-likesDislikesRouter.post('/:userId/like/:movieId', likeMovie)
-likesDislikesRouter.post('/:userId/dislike/:movieId', dislikeMovie)
+likesDislikesRouter.post('/:userId/like/:movieId', likeMovie);
+
+likesDislikesRouter.post('/:userId/dislike/:movieId', dislikeMovie);
 
 export default likesDislikesRouter;

@@ -49,7 +49,7 @@ export const dislikeMovie = async (req, res) => {
 
 /* 
 
-Assuming a user can only can not both like, and dislike the same movie,
+Assuming a user can not both like, and dislike the same movie,
 these functions check if a user already likes or dislikes a movie, 
 and if so, deletes the entry.
 
