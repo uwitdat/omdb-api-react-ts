@@ -10,6 +10,10 @@ export const getAllMovies = async (_, res) => {
           createdAt: 'desc',
         }
       ],
+      include: {
+        likes: true,
+        dislikes: true
+      },
     });
     res.status(200).send({ 'success': true, 'data': allMovies });
 
@@ -45,7 +49,7 @@ export const createNewMovie = async (req, res) => {
 }
 
 export const editMovie = async (req, res) => {
-  /* edits a movie by id */
+  /* finds a movie by id and edits if exists */
   const data = req.body;
   const { id } = req.params;
 
@@ -73,6 +77,7 @@ export const editMovie = async (req, res) => {
 }
 
 export const deleteMovie = async (req, res) => {
+  /* finds a movie by id and deletes if exists */
   const { id } = req.params;
 
   const movieToDelete = await prisma.Movie.findUnique({

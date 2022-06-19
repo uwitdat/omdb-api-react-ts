@@ -2,6 +2,7 @@ import express from "express";
 import pkg from 'body-parser';
 import cors from 'cors';
 import moviesRouter from "../routes/movies.js";
+import likesDislikesRouter from "../routes/likesDislikes.js";
 
 const { json } = pkg;
 
@@ -15,6 +16,7 @@ const createApp = () => {
   });
 
   app.use('/movies', moviesRouter);
+  app.use('/likes-dislikes', likesDislikesRouter);
 
   return app;
 }

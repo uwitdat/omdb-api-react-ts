@@ -11,7 +11,6 @@ export const searchMovieByTitle = async (req, res) => {
         mode: 'insensitive',
       }
     },
-
   })
 
   if (!movie) {
